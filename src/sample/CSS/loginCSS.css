@@ -1,0 +1,79 @@
+#APane{
+    -fx-background-image: url("../resources/carLoginBackground.jpg");
+        -fx-background-repeat: stretch;
+        -fx-background-size: 900 506;
+        -fx-background-position: center center;
+        -fx-effect: dropshadow(three-pass-box, black, 30, 0.5, 0, 0);
+}
+#header{
+    -fx-text-fill: black;
+}
+
+#usernameLabel{
+    -fx-font-weight: bold;
+    -fx-text-fill: black;
+}
+
+#PwdLabel{
+    -fx-font-weight: bold;
+    -fx-text-fill: black;
+
+}
+
+#usernameTextField{
+    -fx-background-color: transparent;
+    -fx-border-style: hidden hidden solid hidden;
+    -fx-border-width: 2;
+    -fx-border-color: black;
+    -fx-font-weight: bold;
+    -fx-font-size: 16px;
+    -fx-text-fill: black;
+}
+
+#passwordField{
+    -fx-background-color: transparent;
+    -fx-border-style: hidden hidden solid hidden;
+    -fx-border-width: 2;
+    -fx-border-color: black;
+    -fx-font-weight: bold;
+    -fx-font-size: 16px;
+    -fx-text-fill: black;
+
+}
+
+ #orLabel{
+
+     -fx-background-color: transparent;
+     -fx-border-style: solid;
+     -fx-font-weight: bold;
+     -fx-font-size: 20px;
+     -fx-text-fill: black;
+     -fx-border-radius: 50;
+     -fx-border-width: 3;
+}
+
+
+#loginBtn{
+    -fx-font-size: 20px;
+    -fx-font-weight: bold;
+    -fx-text-fill: black;
+    -fx-border-style: solid hidden solid solid;
+    -fx-background-color: transparent;
+    -fx-border-width: 3;
+}
+#loginBtn:hover{
+    -fx-font-size: 25px;
+}
+
+#signUpBtn{
+    -fx-font-size: 20px;
+    -fx-font-weight: bold;
+    -fx-text-fill: black;
+    -fx-border-style:  solid solid solid hidden;
+    -fx-background-color: transparent;
+    -fx-border-width: 3;
+}
+
+#signUpBtn:hover{
+    -fx-font-size: 25px;
+}
