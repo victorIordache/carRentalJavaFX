@@ -1,6 +1,9 @@
 package sample.model;
 
+import sample.car.Car;
+
 import java.util.Date;
+import java.util.List;
 
 public class User {
     private int userID;
@@ -11,6 +14,8 @@ public class User {
     private Date birthday;
     private String email;
     private String CNP;
+    private driverLicense license;
+    private List<Car> rentedCars;
 
     public String getCNP() {
         return CNP;
@@ -74,5 +79,21 @@ public class User {
 
     public void setEmail(String email) {
         this.email = email;
+    }
+
+    public driverLicense getLicense() {
+        return license;
+    }
+
+    public void setLicense(driverLicense license) {
+        this.license = license;
+    }
+
+    public List<Car> getRentedCars() {
+        return rentedCars;
+    }
+
+    public void setRentedCars(List<Car> rentedCars) {
+        this.rentedCars = rentedCars;
     }
 }

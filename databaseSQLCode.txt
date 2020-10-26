@@ -1,0 +1,60 @@
+CREATE TABLE Users(
+	userID INT(11) PRIMARY KEY AUTO_INCREMENT,
+    firstName VARCHAR(255) NOT NULL,
+    lastName VARCHAR(255) NOT NULL,
+    birthday DATE NOT NULL,
+    email VARCHAR(255) NOT NULL UNIQUE,
+    CNP VARCHAR(255) NOT NULL UNIQUE,
+    CONSTRAINT UC_Users UNIQUE (firstName, lastName, email, CNP)
+);
+
+CREATE TABLE Address(
+	userID INT(11) PRIMARY KEY,
+	addressLine VARCHAR(255) NOT NULL,
+    city VARCHAR(255) NOT NULL,
+    postalCode INT(11) NOT NULL,
+    FOREIGN KEY (userID) REFERENCES Users(userID)
+);
+
+CREATE TABLE phoneNumbers(
+	phoneNumberID INT(11) PRIMARY KEY AUTO_INCREMENT,
+    userID INT(11),
+    countryCode VARCHAR(255),
+    phoneNumber VARCHAR(255),
+    FOREIGN KEY (userID) REFERENCES Users(userID)
+);
+
+CREATE TABLE Salesman(
+	salesmanID INT(11) PRIMARY KEY AUTO_INCREMENT,
+    userID INT(11),
+    salary INT(11),
+    hiredAt DATE NOT NULL,
+    resignedAt DATE,
+    FOREIGN KEY (userID) REFERENCES Users(userID)
+);
+
+CREATE TABLE Customers(
+	customerID INT(11) PRIMARY KEY AUTO_INCREMENT,
+    userID INT(11),
+    budget INT(11),
+    FOREIGN KEY (userID) REFERENCES Users(userID)
+);
+
+CREATE TABLE driverLicense(
+	firstName VARCHAR(255) NOT NULL,
+    lastName VARCHAR(255) NOT NULL,
+    birthday DATE NOT NULL,
+    validityStart DATE NOT NULL,
+    validityEnd DATE NOT NULL,
+    CNP VARCHAR(255) PRIMARY KEY,
+    licenseNumber VARCHAR(255) UNIQUE NOT NULL,
+    FOREIGN KEY (CNP) REFERENCES Users(CNP),
+    CONSTRAINT UC_License UNIQUE (CNP, licenseNumber)
+);
+
+CREATE TABLE licenseType(
+	licenseNumber VARCHAR(255) PRIMARY KEY,
+	category ENUM("AM","A1","A2","A","B1","B","C1","C","D1","D","BE","C1E","CE","D1E","DE"),
+    CONSTRAINT UC_licenseType UNIQUE (licenseNumber, category),
+    FOREIGN KEY (licenseNumber) REFERENCES driverLicense(licenseNumber)
+);

@@ -4,7 +4,7 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<AnchorPane fx:id="APane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="497.0" prefWidth="899.0" stylesheets="@../CSS/loginCSS.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.view.LoginController">
+<AnchorPane fx:id="APane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="497.0" prefWidth="899.0" style="-fx-text-fill: black;" stylesheets="@../CSS/loginCSS.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.view.LoginController">
    <children>
       <Label fx:id="header" alignment="CENTER" layoutX="254.0" layoutY="50.0" prefHeight="43.0" prefWidth="77.0" style="-fx-font-weight: bold;" text="Login" textAlignment="CENTER">
          <font>
@@ -21,12 +21,12 @@
             <Font size="24.0" />
          </font>
       </Label>
-      <TextField id="usernameTextField" fx:id="usernameTextField" layoutX="207.0" layoutY="137.0" prefHeight="41.0" prefWidth="240.0" text="Username / Email">
+      <TextField id="usernameTextField" fx:id="usernameTextField" layoutX="207.0" layoutY="137.0" prefHeight="41.0" prefWidth="240.0" promptText="Username / Email">
          <font>
             <Font size="16.0" />
          </font>
       </TextField>
-      <PasswordField id="PwdTextField" fx:id="passwordField" layoutX="207.0" layoutY="212.0" prefHeight="37.0" prefWidth="240.0" style="-fx-border-width: 2; -fx-background-color: transparent; -fx-font-weight: bold; -fx-font-size: 16; -fx-text-fill: black; -fx-border-style: hidden hidden solid hidden;" text="asdfasdf">
+      <PasswordField id="PwdTextField" fx:id="passwordField" layoutX="207.0" layoutY="212.0" prefHeight="37.0" prefWidth="240.0" promptText="Password" style="-fx-border-width: 2; -fx-background-color: transparent; -fx-font-weight: bold; -fx-font-size: 16; -fx-text-fill: black; -fx-border-style: hidden hidden solid hidden; -fx-prompt-text-fill: black;">
          <font>
             <Font size="16.0" />
          </font>

@@ -1,4 +1,8 @@
 package sample.car;
 
-public class Car {
+public abstract class Car {
+
+    private int doorsNumber;
+
+
 }
