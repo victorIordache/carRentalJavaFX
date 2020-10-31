@@ -1,0 +1,141 @@
+
+#Apane{
+    -fx-background-image: url("../resources/signUpBackground.jpeg");
+    -fx-background-size: cover;
+    -fx-background-position: center center;
+    -fx-effect: dropshadow(three-pass-box, black, 30, 0.5, 0, 0);
+
+}
+
+#registerBtn{
+    -fx-font-size: 20px;
+    -fx-font-weight: bold;
+    -fx-text-fill: black;
+    -fx-border-style: hidden;
+    -fx-background-color: transparent;
+    -fx-border-width: 3;
+}
+
+#registerBtn:hover{
+    -fx-font-size: 25px;
+}
+
+#backBtn{
+    -fx-font-size: 20px;
+    -fx-font-weight: bold;
+    -fx-text-fill: black;
+    -fx-border-style:  hidden;
+    -fx-background-color: transparent;
+    -fx-border-width: 3;
+}
+
+#backBtn:hover{
+    -fx-font-size: 25px;
+}
+
+#usernameTextField{
+    -fx-background-color: transparent;
+    -fx-border-style: hidden hidden solid hidden;
+    -fx-border-width: 2;
+    -fx-border-color: black;
+    -fx-font-weight: bold;
+    -fx-font-size: 18px;
+    -fx-text-fill: black;
+    -fx-prompt-text-fill: black;
+}
+
+#passwordTextField{
+    -fx-background-color: transparent;
+    -fx-border-style: hidden hidden solid hidden;
+    -fx-border-width: 2;
+    -fx-border-color: black;
+    -fx-font-weight: bold;
+    -fx-font-size: 18px;
+    -fx-text-fill: black;
+    -fx-prompt-text-fill: black;
+}
+
+#firstNameTextField{
+    -fx-background-color: transparent;
+    -fx-border-style: hidden hidden solid hidden;
+    -fx-border-width: 2;
+    -fx-border-color: black;
+    -fx-font-weight: bold;
+    -fx-font-size: 18px;
+    -fx-text-fill: black;
+    -fx-prompt-text-fill: black;
+}
+#lastNameTextField{
+    -fx-background-color: transparent;
+    -fx-border-style: hidden hidden solid hidden;
+    -fx-border-width: 2;
+    -fx-border-color: black;
+    -fx-font-weight: bold;
+    -fx-font-size: 18px;
+    -fx-text-fill: black;
+    -fx-prompt-text-fill: black;
+}
+#countryCodeTextField{
+    -fx-background-color: transparent;
+    -fx-border-style: solid;
+    -fx-border-width: 2;
+    -fx-border-color: black;
+    -fx-font-weight: bold;
+    -fx-font-size: 18px;
+    -fx-text-fill: black;
+    -fx-prompt-text-fill: black;
+}
+#phoneNumberTextField{
+    -fx-background-color: transparent;
+    -fx-border-style: solid;
+    -fx-border-width: 2;
+    -fx-border-color: black;
+    -fx-font-weight: bold;
+    -fx-font-size: 18px;
+    -fx-text-fill: black;
+    -fx-prompt-text-fill: black;}
+#cityTextField{
+    -fx-background-color: transparent;
+    -fx-border-style: hidden hidden solid hidden;
+    -fx-border-width: 2;
+    -fx-border-color: black;
+    -fx-font-weight: bold;
+    -fx-font-size: 18px;
+    -fx-text-fill: black;
+    -fx-prompt-text-fill: black;
+}
+#addressTextField{
+    -fx-background-color: transparent;
+    -fx-border-style: hidden hidden solid hidden;
+    -fx-border-width: 2;
+    -fx-border-color: black;
+    -fx-font-weight: bold;
+    -fx-font-size: 18px;
+    -fx-text-fill: black;
+    -fx-prompt-text-fill: black;
+}
+#postalCodeTextField{
+    -fx-background-color: transparent;
+    -fx-border-style: hidden hidden solid hidden;
+    -fx-border-width: 2;
+    -fx-border-color: black;
+    -fx-font-weight: bold;
+    -fx-font-size: 18px;
+    -fx-text-fill: black;
+    -fx-prompt-text-fill: black;
+}
+#datePicker{
+        -fx-font-size: 18px;
+}
+#CNPTextField{
+    -fx-background-color: transparent;
+    -fx-border-style: hidden hidden solid hidden;
+    -fx-border-width: 2;
+    -fx-border-color: black;
+    -fx-font-weight: bold;
+    -fx-font-size: 18px;
+    -fx-text-fill: black;
+    -fx-prompt-text-fill: black;
+}
+
+

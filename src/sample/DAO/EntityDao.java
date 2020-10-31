@@ -2,8 +2,9 @@ package sample.DAO;
 
 import java.util.List;
 
-public interface entityDao<T> {
+public interface EntityDao<T> {
 
+    // Change class name to camel case
     List<T> findAll();
 
     T findById(int itemId);

@@ -1,6 +1,6 @@
 package sample.model;
 
-public enum licenseCategories {
+public enum LicenseCategories {
     AM,
     A1,
     A2,

@@ -4,7 +4,7 @@ import sample.model.User;
 
 import java.util.List;
 
-public class userDBDao implements userDao{
+public class UserDBDao implements UserDao {
     @Override
     public List<User> findAll() {
         return null;
@@ -33,5 +33,11 @@ public class userDBDao implements userDao{
     @Override
     public void remove(int itemId) {
 
+    }
+
+    @Override
+    public User login(String username, String password) {
+
+        return null;
     }
 }

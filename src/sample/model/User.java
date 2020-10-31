@@ -14,8 +14,9 @@ public class User {
     private Date birthday;
     private String email;
     private String CNP;
-    private driverLicense license;
+    private DriverLicense license;
     private List<Car> rentedCars;
+    private Account account;
 
     public String getCNP() {
         return CNP;
@@ -81,11 +82,11 @@ public class User {
         this.email = email;
     }
 
-    public driverLicense getLicense() {
+    public DriverLicense getLicense() {
         return license;
     }
 
-    public void setLicense(driverLicense license) {
+    public void setLicense(DriverLicense license) {
         this.license = license;
     }
 
@@ -96,4 +97,6 @@ public class User {
     public void setRentedCars(List<Car> rentedCars) {
         this.rentedCars = rentedCars;
     }
+
+
 }

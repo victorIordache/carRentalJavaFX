@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane fx:id="Apane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="501.0" prefWidth="894.0" stylesheets="@../CSS/signUpCSS.css" fx:controller="sample.view.SignUpController" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Button fx:id="registerBtn" layoutX="342.0" layoutY="434.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="149.0" text="Register">
+         <font>
+            <Font size="20.0" />
+         </font></Button>
+      <Label layoutX="34.0" layoutY="244.0" style="-fx-text-fill: black; -fx-font-weight: bold;" text="First Name">
+         <font>
+            <Font size="18.0" />
+         </font></Label>
+      <Label layoutX="38.0" layoutY="313.0" style="-fx-text-fill: black; -fx-font-weight: bold;" text="Last Name">
+         <font>
+            <Font size="18.0" />
+         </font></Label>
+      <Label layoutX="443.0" layoutY="175.0" style="-fx-text-fill: black; -fx-font-weight: bold;" text="Address Line">
+         <font>
+            <Font size="18.0" />
+         </font></Label>
+      <Label layoutX="475.0" layoutY="111.0" prefHeight="27.0" prefWidth="44.0" style="-fx-text-fill: black; -fx-font-weight: bold;" text="City">
+         <font>
+            <Font size="18.0" />
+         </font></Label>
+      <Label layoutX="447.0" layoutY="244.0" style="-fx-text-fill: black; -fx-font-weight: bold;" text="Postal Code">
+         <font>
+            <Font size="18.0" />
+         </font></Label>
+      <Label layoutX="18.0" layoutY="382.0" style="-fx-text-fill: black; -fx-font-weight: bold;" text="Phone Number">
+         <font>
+            <Font size="18.0" />
+         </font></Label>
+      <Label layoutX="459.0" layoutY="313.0" style="-fx-text-fill: black; -fx-font-weight: bold;" text="Birthday">
+         <font>
+            <Font size="18.0" />
+         </font></Label>
+      <Label layoutX="477.0" layoutY="382.0" style="-fx-text-fill: black; -fx-font-weight: bold;" text="CNP">
+         <font>
+            <Font size="18.0" />
+         </font></Label>
+      <Label layoutX="37.0" layoutY="108.0" prefHeight="34.0" prefWidth="91.0" style="-fx-text-fill: black; -fx-font-weight: bold;" text="Username">
+         <font>
+            <Font size="18.0" />
+         </font></Label>
+      <Label layoutX="42.0" layoutY="175.0" style="-fx-font-weight: bold; -fx-text-fill: black;" text="Password">
+         <font>
+            <Font size="18.0" />
+         </font></Label>
+      <TextField fx:id="usernameTextField" layoutX="177.0" layoutY="103.0" prefHeight="41.0" prefWidth="179.0">
+         <font>
+            <Font size="18.0" />
+         </font></TextField>
+      <TextField fx:id="passwordTextField" layoutX="177.0" layoutY="168.0" prefHeight="39.0" prefWidth="179.0">
+         <font>
+            <Font size="18.0" />
+         </font></TextField>
+      <TextField fx:id="firstNameTextField" layoutX="177.0" layoutY="238.0" prefHeight="39.0" prefWidth="179.0">
+         <font>
+            <Font size="18.0" />
+         </font></TextField>
+      <TextField fx:id="lastNameTextField" layoutX="177.0" layoutY="308.0" prefHeight="39.0" prefWidth="179.0">
+         <font>
+            <Font size="18.0" />
+         </font></TextField>
+      <TextField fx:id="phoneNumberTextField" layoutX="241.0" layoutY="376.0" prefHeight="39.0" prefWidth="115.0">
+         <font>
+            <Font size="18.0" />
+         </font></TextField>
+      <TextField fx:id="cityTextField" layoutX="597.0" layoutY="105.0" prefHeight="39.0" prefWidth="179.0">
+         <font>
+            <Font size="18.0" />
+         </font></TextField>
+      <Label layoutX="366.0" layoutY="25.0" style="-fx-text-fill: black; -fx-font-weight: bold;" text="Sign UP">
+         <font>
+            <Font size="27.0" />
+         </font>
+      </Label>
+      <TextField fx:id="addressTextField" layoutX="597.0" layoutY="169.0" prefHeight="39.0" prefWidth="179.0">
+         <font>
+            <Font size="18.0" />
+         </font></TextField>
+      <TextField fx:id="postalCodeTextField" layoutX="597.0" layoutY="238.0" prefHeight="39.0" prefWidth="179.0">
+         <font>
+            <Font size="18.0" />
+         </font></TextField>
+      <TextField fx:id="CNPTextField" layoutX="597.0" layoutY="376.0" prefHeight="39.0" prefWidth="179.0">
+         <font>
+            <Font size="18.0" />
+         </font></TextField>
+      <Button fx:id="backBtn" layoutX="14.0" layoutY="14.0" mnemonicParsing="false" prefHeight="44.0" prefWidth="108.0" text="Back">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Button>
+      <DatePicker fx:id="datePicker" layoutX="597.0" layoutY="305.0" prefHeight="39.0" prefWidth="179.0" />
+      <TextField fx:id="countryCodeTextField" layoutX="177.0" layoutY="376.0" prefHeight="39.0" prefWidth="57.0">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </TextField>
+   </children>
+</AnchorPane>

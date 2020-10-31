@@ -4,7 +4,7 @@ import sample.car.Car;
 
 import java.util.List;
 
-public class carDBDao implements carDao {
+public class CarDBDao implements CarDao {
     @Override
     public List<Car> findAll() {
         return null;
