@@ -58,3 +58,42 @@ CREATE TABLE licenseType(
     CONSTRAINT UC_licenseType UNIQUE (licenseNumber, category),
     FOREIGN KEY (licenseNumber) REFERENCES driverLicense(licenseNumber)
 );
+
+
+<! -- WROTE ALREADY -->
+
+CREATE SCHEMA carRental;
+
+CREATE TABLE Users(
+	userID INT(11) PRIMARY KEY AUTO_INCREMENT,
+    firstName VARCHAR(255) NOT NULL,
+    lastName VARCHAR(255) NOT NULL,
+    birthday DATE NOT NULL,
+    email VARCHAR(255) NOT NULL UNIQUE,
+    CNP VARCHAR(255) NOT NULL UNIQUE
+);
+
+CREATE TABLE phoneNumbers(
+	phoneNumberID INT(11) PRIMARY KEY AUTO_INCREMENT,
+    userID INT(11),
+    countryCode VARCHAR(255) NOT NULL,
+    phoneNumber VARCHAR(255) NOT NULL,
+    FOREIGN KEY (userID) REFERENCES Users(userID),
+    CONSTRAINT Number_UQ UNIQUE (countryCode, phoneNumber)
+);
+
+CREATE TABLE Address(
+	addressID INT(11) PRIMARY KEY AUTO_INCREMENT,
+	userID INT(11),
+	addressLine VARCHAR(255) NOT NULL,
+    city VARCHAR(255) NOT NULL,
+    postalCode INT(11) NOT NULL,
+    FOREIGN KEY (userID) REFERENCES Users(userID)
+);
+CREATE TABLE Accounts(
+	userID INT(11),
+	accountID INT(11) PRIMARY KEY AUTO_INCREMENT,
+	username VARCHAR(255) NOT NULL UNIQUE,
+    pass VARCHAR(255) NOT NULL,
+    FOREIGN KEY (userID) REFERENCES Users(userID)
+);
