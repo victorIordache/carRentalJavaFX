@@ -7,7 +7,7 @@ import java.sql.SQLException;
 public class DBUtil {
 
 
-    private static String databaseURL = "jdbc:mysql://localhost:3306/jademydatabase";
+    private static String databaseURL = "jdbc:mysql://localhost:3306/carrental";
     private static String userDB = "root";
     private static String passwordDB = "password";
 

@@ -3,6 +3,7 @@ package sample.view;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.DatePicker;
+import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
@@ -33,7 +34,7 @@ public class SignUpController {
     private TextField usernameTextField;
 
     @FXML
-    private TextField passwordTextField;
+    private PasswordField passwordTextField;
 
     @FXML
     private TextField firstNameTextField;
@@ -68,27 +69,24 @@ public class SignUpController {
     @FXML
     private void initialize(){
         backBtn.addEventHandler(MouseEvent.MOUSE_CLICKED, mouseEvent -> {
-
-            System.out.println("Changing view to Login");
             ViewChangeEvent signUpChangeEvent = new ViewChangeEvent(ViewChangeEvent.LOGIN);
             backBtn.fireEvent(signUpChangeEvent);
         });
         registerBtn.addEventHandler(MouseEvent.MOUSE_CLICKED, mouseEvent -> {
             if(handleRegistration()){
-                System.out.println("Changing view to login with Register button");
-
+                // Creating the objects
                 Address address = new Address(addressTextField.getText(),cityTextField.getText(),postalCodeTextField.getText());
                 PhoneNumber phoneNumber = new PhoneNumber(countryCodeTextField.getText(),phoneNumberTextField.getText());
                 Account account = new Account(usernameTextField.getText(),passwordTextField.getText());
                 User newUser = new User(firstNameTextField.getText(),lastNameTextField.getText(),address,phoneNumber, java.sql.Date.valueOf(datePicked.getValue()),CNPTextField.getText(),account);
+
+                // Add the user to the DB
                 userDao.create(newUser);
 
-
+                // Change view to Login
                 ViewChangeEvent registerChangeEvent = new ViewChangeEvent(ViewChangeEvent.LOGIN);
                 registerBtn.fireEvent(registerChangeEvent);
             }
-
-
         });
 
     }

@@ -22,7 +22,7 @@ public class UserDBDao implements UserDao {
 
     @Override
     public void create(User user) {
-        String usersQuery = "INSERT INTO Users(firstName,lastName,birthday,email,CNP) VALUES(?,?,?,?)";
+        String usersQuery = "INSERT INTO users (firstName,lastName,birthday,CNP) VALUES(?,?,?,?)";
         String phoneNumberQuery = "INSERT INTO phonenumbers(userID,countryCode,phoneNumber) VALUES((SELECT userID FROM users WHERE CNP='" + user.getCNP() +"'),?,?)";
         String addressQuery = "INSERT INTO address(userID,addressLine,city,postalCode) VALUES((SELECT userID FROM users WHERE CNP='" + user.getCNP() +"'),?,?,?)";
         String accountsQuery = "INSERT INTO accounts(userID,username,pass) VALUES((SELECT userID FROM users WHERE CNP='" + user.getCNP() +"'),?,?)";
@@ -36,7 +36,7 @@ public class UserDBDao implements UserDao {
             usersPreparedStmt.setString(1,user.getFirstName());
             usersPreparedStmt.setString(2,user.getLastName());
             usersPreparedStmt.setDate(3, java.sql.Date.valueOf(user.getBirthdayString()));
-            usersPreparedStmt.setString(4,user.getEmail());
+            usersPreparedStmt.setString(4,user.getCNP());
 
             phoneNumberStmt.setString(1,user.getPhonenumber().getCountryCode());
             phoneNumberStmt.setString(2,user.getPhonenumber().getPhoneNumber());
