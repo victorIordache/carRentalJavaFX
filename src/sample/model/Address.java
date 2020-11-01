@@ -5,6 +5,12 @@ public class Address {
     private String city;
     private String postalCode;
 
+    public Address(String addressLine, String city, String postalCode) {
+        this.addressLine = addressLine;
+        this.city = city;
+        this.postalCode = postalCode;
+    }
+
     public String getAddressLine() {
         return addressLine;
     }

@@ -18,6 +18,28 @@ public class User {
     private List<Car> rentedCars;
     private Account account;
 
+    public User(){
+
+    }
+
+    public User(String firstName, String lastName, Address address, PhoneNumber phonenumber, Date birthday, String CNP, Account account) {
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.address = address;
+        this.phonenumber = phonenumber;
+        this.birthday = birthday;
+        this.CNP = CNP;
+        this.account = account;
+    }
+
+    public Account getAccount() {
+        return account;
+    }
+
+    public void setAccount(Account account) {
+        this.account = account;
+    }
+
     public String getCNP() {
         return CNP;
     }
@@ -98,5 +120,8 @@ public class User {
         this.rentedCars = rentedCars;
     }
 
+    public String getBirthdayString() {
+        return birthday.toString();
+    }
 
 }

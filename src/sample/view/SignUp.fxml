@@ -50,19 +50,19 @@
          <font>
             <Font size="18.0" />
          </font></Label>
-      <TextField fx:id="usernameTextField" layoutX="177.0" layoutY="103.0" prefHeight="41.0" prefWidth="179.0">
+      <TextField fx:id="usernameTextField" layoutX="171.0" layoutY="103.0" prefHeight="43.0" prefWidth="185.0">
          <font>
             <Font size="18.0" />
          </font></TextField>
-      <TextField fx:id="passwordTextField" layoutX="177.0" layoutY="168.0" prefHeight="39.0" prefWidth="179.0">
+      <TextField fx:id="passwordTextField" layoutX="171.0" layoutY="168.0" prefHeight="43.0" prefWidth="185.0">
          <font>
             <Font size="18.0" />
          </font></TextField>
-      <TextField fx:id="firstNameTextField" layoutX="177.0" layoutY="238.0" prefHeight="39.0" prefWidth="179.0">
+      <TextField fx:id="firstNameTextField" layoutX="171.0" layoutY="238.0" prefHeight="43.0" prefWidth="185.0">
          <font>
             <Font size="18.0" />
          </font></TextField>
-      <TextField fx:id="lastNameTextField" layoutX="177.0" layoutY="308.0" prefHeight="39.0" prefWidth="179.0">
+      <TextField fx:id="lastNameTextField" layoutX="171.0" layoutY="308.0" prefHeight="43.0" prefWidth="185.0">
          <font>
             <Font size="18.0" />
          </font></TextField>
@@ -97,7 +97,7 @@
          </font>
       </Button>
       <DatePicker fx:id="datePicked" layoutX="597.0" layoutY="305.0" prefHeight="39.0" prefWidth="179.0" />
-      <TextField fx:id="countryCodeTextField" layoutX="177.0" layoutY="376.0" prefHeight="39.0" prefWidth="57.0">
+      <TextField fx:id="countryCodeTextField" layoutX="171.0" layoutY="376.0" prefHeight="43.0" prefWidth="63.0">
          <font>
             <Font size="18.0" />
          </font>

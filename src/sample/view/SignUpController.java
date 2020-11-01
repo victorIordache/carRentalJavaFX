@@ -6,14 +6,22 @@ import javafx.scene.control.DatePicker;
 import javafx.scene.control.TextField;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
-import org.w3c.dom.Text;
+import sample.DAO.UserDBDao;
+import sample.DAO.UserDao;
 import sample.Events.ViewChangeEvent;
+import sample.model.Account;
+import sample.model.Address;
+import sample.model.PhoneNumber;
+import sample.model.User;
 
 import java.time.LocalDate;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 
 public class SignUpController {
+
+    UserDao userDao = new UserDBDao();
 
     @FXML
     private AnchorPane Apane;
@@ -68,9 +76,18 @@ public class SignUpController {
         registerBtn.addEventHandler(MouseEvent.MOUSE_CLICKED, mouseEvent -> {
             if(handleRegistration()){
                 System.out.println("Changing view to login with Register button");
+
+                Address address = new Address(addressTextField.getText(),cityTextField.getText(),postalCodeTextField.getText());
+                PhoneNumber phoneNumber = new PhoneNumber(countryCodeTextField.getText(),phoneNumberTextField.getText());
+                Account account = new Account(usernameTextField.getText(),passwordTextField.getText());
+                User newUser = new User(firstNameTextField.getText(),lastNameTextField.getText(),address,phoneNumber, java.sql.Date.valueOf(datePicked.getValue()),CNPTextField.getText(),account);
+                userDao.create(newUser);
+
+
                 ViewChangeEvent registerChangeEvent = new ViewChangeEvent(ViewChangeEvent.LOGIN);
                 registerBtn.fireEvent(registerChangeEvent);
             }
+
 
         });
 
@@ -86,7 +103,7 @@ public class SignUpController {
 
     private boolean validateInputs(){
         if(datePicked.getValue() == null){
-            datePicked.setValue(LocalDate.of(1998,1,24));
+            datePicked.setValue(LocalDate.of(1998,2,24));
             return false;
         }
         for(TextField textField : getAllTextFields()){
