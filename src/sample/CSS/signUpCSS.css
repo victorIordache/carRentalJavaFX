@@ -124,7 +124,7 @@
     -fx-text-fill: black;
     -fx-prompt-text-fill: black;
 }
-#datePicker{
+#datePicked{
         -fx-font-size: 18px;
 }
 #CNPTextField{

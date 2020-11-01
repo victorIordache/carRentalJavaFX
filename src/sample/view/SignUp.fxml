@@ -4,9 +4,9 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<AnchorPane fx:id="Apane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="501.0" prefWidth="894.0" stylesheets="@../CSS/signUpCSS.css" fx:controller="sample.view.SignUpController" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane fx:id="Apane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="501.0" prefWidth="894.0" stylesheets="@../CSS/signUpCSS.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.view.SignUpController">
    <children>
-      <Button fx:id="registerBtn" layoutX="342.0" layoutY="434.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="149.0" text="Register">
+      <Button fx:id="registerBtn" layoutX="342.0" layoutY="434.0" mnemonicParsing="false" onAction="#handleRegistration" prefHeight="39.0" prefWidth="149.0" text="Register">
          <font>
             <Font size="20.0" />
          </font></Button>
@@ -96,7 +96,7 @@
             <Font size="20.0" />
          </font>
       </Button>
-      <DatePicker fx:id="datePicker" layoutX="597.0" layoutY="305.0" prefHeight="39.0" prefWidth="179.0" />
+      <DatePicker fx:id="datePicked" layoutX="597.0" layoutY="305.0" prefHeight="39.0" prefWidth="179.0" />
       <TextField fx:id="countryCodeTextField" layoutX="177.0" layoutY="376.0" prefHeight="39.0" prefWidth="57.0">
          <font>
             <Font size="18.0" />

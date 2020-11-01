@@ -2,9 +2,16 @@ package sample.view;
 
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
+import javafx.scene.control.DatePicker;
+import javafx.scene.control.TextField;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
+import org.w3c.dom.Text;
 import sample.Events.ViewChangeEvent;
+
+import java.time.LocalDate;
+import java.util.ArrayList;
+import java.util.List;
 
 public class SignUpController {
 
@@ -14,6 +21,43 @@ public class SignUpController {
     @FXML
     private Button backBtn;
 
+    @FXML
+    private TextField usernameTextField;
+
+    @FXML
+    private TextField passwordTextField;
+
+    @FXML
+    private TextField firstNameTextField;
+
+    @FXML
+    private TextField lastNameTextField;
+
+    @FXML
+    private TextField countryCodeTextField;
+
+    @FXML
+    private TextField phoneNumberTextField;
+
+    @FXML
+    private TextField cityTextField;
+
+    @FXML
+    private TextField addressTextField;
+
+    @FXML
+    private TextField postalCodeTextField;
+
+    @FXML
+    private DatePicker datePicked;
+
+    @FXML
+    private TextField CNPTextField;
+
+    @FXML
+    private Button registerBtn;
+
+    @FXML
     private void initialize(){
         backBtn.addEventHandler(MouseEvent.MOUSE_CLICKED, mouseEvent -> {
 
@@ -21,5 +65,50 @@ public class SignUpController {
             ViewChangeEvent signUpChangeEvent = new ViewChangeEvent(ViewChangeEvent.LOGIN);
             backBtn.fireEvent(signUpChangeEvent);
         });
+        registerBtn.addEventHandler(MouseEvent.MOUSE_CLICKED, mouseEvent -> {
+            if(handleRegistration()){
+                System.out.println("Changing view to login with Register button");
+                ViewChangeEvent registerChangeEvent = new ViewChangeEvent(ViewChangeEvent.LOGIN);
+                registerBtn.fireEvent(registerChangeEvent);
+            }
+
+        });
+
+    }
+
+    @FXML
+    private boolean handleRegistration(){
+        if(!validateInputs()){
+            return false;
+        }
+        return true;
+    }
+
+    private boolean validateInputs(){
+        if(datePicked.getValue() == null){
+            datePicked.setValue(LocalDate.of(1998,1,24));
+            return false;
+        }
+        for(TextField textField : getAllTextFields()){
+            if(textField.getText().isEmpty() || textField.getText().equals("This field is required")){
+                textField.setText("This field is required");
+                return false;
+            }
+        }
+        return true;
+    }
+    private List<TextField> getAllTextFields(){
+        List<TextField> TextFields = new ArrayList<>();
+        TextFields.add(usernameTextField);
+        TextFields.add(passwordTextField);
+        TextFields.add(firstNameTextField);
+        TextFields.add(lastNameTextField);
+        TextFields.add(countryCodeTextField);
+        TextFields.add(phoneNumberTextField);
+        TextFields.add(cityTextField);
+        TextFields.add(addressTextField);
+        TextFields.add(postalCodeTextField);
+        TextFields.add(CNPTextField);
+        return TextFields;
     }
 }
